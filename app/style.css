@@ -25,5 +25,13 @@ main nav ul {
 main nav li {
   margin: 1em 1em 1em 1em;
 }
+main nav a {
+  color: tomato;
+  text-decoration: none;
+}
+main nav a:hover {
+  color: lightseagreen;
+  text-decoration: underline;
+}
 
 /*# sourceMappingURL=style.css.map */

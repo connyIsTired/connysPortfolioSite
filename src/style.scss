@@ -31,5 +31,15 @@ main {
         li {
             margin: 1em 1em 1em 1em;
         }
+
+        a {
+            color: tomato;
+            text-decoration: none;
+
+            &:hover {
+                color: lightseagreen;
+                text-decoration: underline;
+            }
+        }
     }
 }
