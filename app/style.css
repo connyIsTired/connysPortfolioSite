@@ -4,4 +4,26 @@ body {
   color: rgb(0, 200, 0);
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+main h1 {
+  display: flex;
+  color: rgb(0, 200, 0);
+  font-size: 3em;
+}
+main nav ul {
+  display: flex;
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+main nav li {
+  margin: 1em 1em 1em 1em;
+}
+
 /*# sourceMappingURL=style.css.map */

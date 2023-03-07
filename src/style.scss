@@ -1,8 +1,35 @@
 $textColor: rgb(0,200,0);
 $mainColor: rgb(32,32,32);
 
-body{
+body {
     font-family: 'Oswald', sans-serif;
     background-color: $mainColor;
     color: $textColor;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    h1 {
+        display: flex;
+        color: $textColor;
+        font-size: 3em;
+    }
+
+    nav {
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            padding-inline-start: 0;
+        }
+
+        li {
+            margin: 1em 1em 1em 1em;
+        }
+    }
 }
