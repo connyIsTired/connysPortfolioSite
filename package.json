@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "\"jest\"",
-    "build": "npx sass style.scss style.css && npx tsc"
+    "build": "npx sass ./src/style.scss ./app/style.css && npx tsc"
   },
   "author": "Conrad Kersten",
   "license": "ISC"
