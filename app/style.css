@@ -1,7 +1,14 @@
 body {
   font-family: "Oswald", sans-serif;
-  background-color: rgb(10, 0, 25);
+  background-color: rgb(213, 203, 226);
   color: rgb(175, 175, 0);
+}
+body .overlay {
+  z-index: 1;
+  background-color: gold;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
 }
 
 main {
@@ -44,7 +51,7 @@ main #slider {
   text-align: center;
   max-width: 500px;
   background: green;
-  z-index: 1;
+  z-index: 2;
   position: absolute;
 }
 

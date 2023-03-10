@@ -1,10 +1,18 @@
 $textColor: rgb(175,175,0);
-$mainColor: rgb(10,0,25);
+$mainColor: rgb(213, 203, 226);
 
 body {
     font-family: 'Oswald', sans-serif;
     background-color: $mainColor;
     color: $textColor;
+
+    .overlay {
+        z-index: 1;
+        background-color: gold;
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+    }
 }
 main {
     display: flex;
@@ -55,7 +63,7 @@ main {
         text-align: center;
         max-width: 500px;
         background: green;
-        z-index: 1;
+        z-index: 2;
         position: absolute;
     }
 }
