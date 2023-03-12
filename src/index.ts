@@ -1,4 +1,22 @@
-import { Iproject, Project, Projects } from "./models/Iproject.model";
+class Project implements Iproject {
+    description: string;
+    url: string;
+    title: string;
+
+    constructor(title: string, description: string, url: string){
+        this.title = title;
+        this.description = description;
+        this.url = url;
+    } 
+}
+
+class Projects implements Iprojects {
+    projects: Project[];
+
+    constructor(projects: Project[]){
+        this.projects = projects;
+    }
+}
 
 const hockeyTracker: Project = new Project(
     "Hockey Shot Tracker",
@@ -18,7 +36,7 @@ const haskellQaTool: Project = new Project(
     "githubrepo.com"
 )
 
-const projects: Projects = new Projects([
+const projectList: Projects = new Projects([
     hockeyTracker,
     portfolioSite,
     haskellQaTool
@@ -38,9 +56,24 @@ function createPanel() {
         const sliderEl = document.getElementById("slider");
         if (sliderEl) {
             toggleOverlay(sliderEl.hidden);
+            addPanelDetails();
             sliderEl.hidden = false;
         }
     })
+}
+
+function addPanelDetails(){
+    const titleEle = document.getElementById("slider-title");
+    const descEle = document.getElementById("slider-description");
+    const urlEle = document.getElementById("slider-url");
+
+    const projects = projectList.projects;
+
+    if (projects && titleEle && descEle && urlEle) {
+       titleEle.innerHTML = projects[0].title;
+       descEle.innerHTML = projects[0].description;
+       urlEle.innerHTML = projects[0].url;
+    }
 }
 
 function toggleOverlay(createOverlay: boolean) {
